@@ -1,0 +1,31 @@
+{
+  "name": "zappy",
+  "version": "1.0.0",
+  "description": "\"Zappy integrates with a Slack channel and listens on messages containing the word “go”. As soon as any member places a message containing “go”, zappy fetches twitter feeds from the twitter account and saves in a mongo collection. Lastly,  zappy fetches tweets from mongoDB and shows in a table.\"",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Maram-Mohammad/zappy.git"
+  },
+  "keywords": [
+    "Express",
+    "RestAPI",
+    "Mongodb",
+    "Zappy"
+  ],
+  "author": "Maram Farrag",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Maram-Mohammad/zappy/issues"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "mongoose": "^5.1.2",
+    "twit": "^2.2.9",
+    "twitter": "^1.7.1"
+  }
+}
