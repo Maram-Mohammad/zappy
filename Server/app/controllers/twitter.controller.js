@@ -1,5 +1,5 @@
 const Twit = require('twit')
-var tweet = require('./app/models/tweet.model')
+var Tweet = require('../models/tweet.model')
 
 var T = new Twit({
     consumer_key: 'BjvThqCCFl6h1DpzUbCVCjYQt',
@@ -11,39 +11,31 @@ var T = new Twit({
 var options = { screen_name: '_FictionFone' };
 
 
+function addData(tweetData){
+    Tweet.find({ id_str: tweetData.id_str }, function (err, docs) {
+        if (docs.length) {
+            console.log(' exists already');
+        } else {
+            var tweet = new Tweet(tweetData)
+            tweet.save(function (err) {
+            });
+        }
+    });
+}
 
-/*exports.fetchTweets = (req, res) => {
+
+const getTweets = function( ) {
     T.get('statuses/user_timeline', options , function(err, data) {
-        tweet.create(data,function(err,temp){
-            if (err) {
-                console.log(err);
-            }
-            else{
-                console.log("success");
-            }
-        })
-    })
-};*/
-
-exports.fetchTweets = (req, res) => {
-    T.get('statuses/user_timeline', options , function(err, data) {
-
         for(i=0; i<data.length; i++) {
-            tweet.findOne({
-                    id_str: data[i].id_str
-                })
-                .exec()
-                .then(function (tweet) {
-                    console.log('already here');
-                })
-                .catch(function (err) {
-                    tweet.create(data[i], function (err, data) {
-                        console.log('success')
-                    })
-                });
+            addData(data[i]);
         }
 
     })
-};
+}
 
+
+
+module.exports = {
+    getTweets
+} ;
 
