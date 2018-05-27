@@ -1,3 +1,46 @@
-table {
-  width: 100%;
+.header{
+  position: absolute;
+  top:10%;
+  left:19%;
+  font-size: 30px;
+  font-weight: 800;
+  color: white;
+  
 }
+table {
+  border:2px solid black;
+  border-radius: 10px;
+  padding:2px 4px 2px 4px;
+  margin: 10px;
+  position: absolute;
+  top:15%;
+  width:60%;
+  right: 20%;
+  left:20%;
+  background-color: white;
+
+}
+
+thead , tr > .number{
+  background-color:cadetblue;
+  color: snow;
+}
+thead{
+  font-size: 20px;
+  font-weight:bolder;
+  padding: 5px;
+}
+tbody{
+
+}
+
+.field{
+  text-align: center;
+  font-size: 15px;
+  font-weight: 200;
+}
+body{
+  background: snow;
+}
+
+

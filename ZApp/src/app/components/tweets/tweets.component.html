@@ -1,20 +1,24 @@
+<div class="table-container">
+  <span class="header">Tweets: </span>
+
 <table _ngcontent-c9="" class="table table-bordered">
 
 
   <thead _ngcontent-c9="" class="ng-tns-c9-1">
-  <tr _ngcontent-c9="" class="ng-tns-c9-1">
-    <th _ngcontent-c9="" class="ng-tns-c9-1">#</th>
-    <th _ngcontent-c9="" class="ng-tns-c9-1">Tweet Text</th>
-    <th _ngcontent-c9="" class="ng-tns-c9-1">Time</th>
+  <tr class="ng-tns-c9-1">
+    <th  class="ng-tns-c9-1">#</th>
+    <th  class="ng-tns-c9-1">Tweet Text</th>
+    <th  class="ng-tns-c9-1">Time</th>
   </tr>
   </thead>
 
 
   <tbody _ngcontent-c9="" class="ng-tns-c9-1"  *ngIf="!!tweets">
-  <tr _ngcontent-c9="" class="ng-tns-c9-1" *ngFor="let tweet of tweets;let i=index;">
-    <th _ngcontent-c9="" class="ng-tns-c9-1" scope="row">{{i+1}}</th>
-    <td _ngcontent-c9="" class="ng-tns-c9-1">{{tweet.text}}</td>
-    <td _ngcontent-c9="" class="ng-tns-c9-1">{{tweet.created_at}}</td>
+  <tr  class="ng-tns-c9-1" *ngFor="let tweet of tweets;let i=index;">
+    <th class="number" scope="row">{{i+1}}</th>
+    <td class="field">{{tweet.text}}</td>
+    <td class="field">{{tweet.created_at  | date: 'MM/dd/yyyy'}}</td>
   </tr>
   </tbody>
 </table>
+</div>

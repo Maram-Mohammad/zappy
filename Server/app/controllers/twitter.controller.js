@@ -12,8 +12,8 @@ var options = { screen_name: '_FictionFone' };
 
 
 function addData(tweetData){
-    Tweet.find({ id_str: tweetData.id_str }, function (err, docs) {
-        if (docs.length) {
+    Tweet.find({ id_str: tweetData.id_str }, function (err, tweets) {
+        if (tweets.length) {
             console.log(' exists already');
         } else {
             var tweet = new Tweet(tweetData)
@@ -29,7 +29,10 @@ const getTweets = function( ) {
         for(i=0; i<data.length; i++) {
             addData(data[i]);
         }
-
+    }).then(()=>{
+        return 'successfully done';
+    }).catch(()=>{
+        return "error"
     })
 }
 
