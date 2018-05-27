@@ -5,13 +5,13 @@ There are 2 ways to run this Zappy APP:
 
 FirstOne:
 ----------
-1-  download { mongodb , node , angular/cli }
-2-  clone the project
-3- run mongo on your Machine {path: "C:\Program Files\MongoDB\Server\version folder\bin"}
-4-  in Directory Zappy/Server :
+-download { mongodb , node , angular/cli }
+-clone the project
+-run mongo on your Machine {path: "C:\Program Files\MongoDB\Server\version folder\bin"}
+-in Directory Zappy/Server :
       a)run npm install command to install require dependencies
       b)use "npm start"command to run the server on port 3100
-5- in Directory Zappy/ZApp :
+-in Directory Zappy/ZApp :
       a)run npm install command to install require dependencies for client side
       b)use "npm start"command to run the client on port 4200
 ===========================================================================================================================================
